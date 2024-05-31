@@ -1,6 +1,6 @@
-using System.Linq;
+namespace ExerciseOne;
 
-public class Triee
+public class Trie
 {
     private readonly TrieNode _root = new TrieNode();
 

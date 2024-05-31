@@ -1,4 +1,4 @@
-using Trie;
+using ExerciseOne;
 
 namespace Trie.Tests;
 
@@ -8,19 +8,17 @@ public class UnitTest1
     public void Trie_InsertAndStartsWith_ShouldReturnCorrectValues()
     {
         // Arrange
-        var trie = new Triee();
+        var trie = new Trie();
         trie.Insert("app");
         trie.Insert("apple");
         trie.Insert("orange");
 
         // Act
-
         var startsWithA = trie.StartsWith("a");
         var startsWithApp = trie.StartsWith("app");
         var startsWithApple = trie.StartsWith("apple");
         var startsWithOrange = trie.StartsWith("orange");
         var startsWithOr = trie.StartsWith("or");
-
         var startsWithPotato = trie.StartsWith("potato");
 
         // Assert
@@ -29,7 +27,6 @@ public class UnitTest1
         Assert.True(startsWithApple);
         Assert.True(startsWithOrange);
         Assert.True(startsWithOr);
-
         Assert.False(startsWithPotato);
     }
 
@@ -43,13 +40,12 @@ public class UnitTest1
         trie.Insert("orange");
 
         // Act
-
-        var startsWithA = trie.StartsWith("a");
-        var startsWithApp = trie.StartsWith("app");
-        var startsWithApple = trie.StartsWith("apple");
-        var startsWithOrange = trie.StartsWith("orange");
-        var startsWithOr = trie.StartsWith("or");
-        var startsWithPotato = trie.StartsWith("potato");
+        var startsWithA = trie.Contains("a");
+        var startsWithApp = trie.Contains("app");
+        var startsWithApple = trie.Contains("apple");
+        var startsWithOrange = trie.Contains("orange");
+        var startsWithOr = trie.Contains("or");
+        var startsWithPotato = trie.Contains("potato");
 
         // Assert
         Assert.False(startsWithA);
