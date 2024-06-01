@@ -1,14 +1,14 @@
-using ExerciseOne;
+using Exercises.ExerciseOne;
 
-namespace Trie.Tests;
+namespace Tests;
 
-public class UnitTest1
+public class ExerciseOneTests
 {
     [Fact]
     public void Trie_InsertAndStartsWith_ShouldReturnCorrectValues()
     {
         // Arrange
-        var trie = new Trie();
+        var trie = new PrefixTree();
         trie.Insert("app");
         trie.Insert("apple");
         trie.Insert("orange");
@@ -30,11 +30,11 @@ public class UnitTest1
         Assert.False(startsWithPotato);
     }
 
-        [Fact]
+    [Fact]
     public void Trie_InsertAndContains_ShouldReturnCorrectValues()
     {
         // Arrange
-        var trie = new Triee();
+        var trie = new PrefixTree();
         trie.Insert("app");
         trie.Insert("apple");
         trie.Insert("orange");
